@@ -6,7 +6,7 @@ import java.util.Properties;
 public class Config {
 
 	private static Config instance;
-	private static String CONFIG_FILE_PATH = "config/config.properties";
+	private static final String CONFIG_FILE_PATH = "config/config.properties";
 	public Properties config = new Properties();
 
 	private Config() {		
@@ -19,16 +19,19 @@ public class Config {
 		}
 	}
 	
-	 public static Config getInstance() {
-	        if (Config.instance == null) {
-	        	Config.instance = new Config();
-	        }
+	public static Config getInstance() {
+		if (Config.instance == null) {
+			Config.instance = new Config();
+        }
+        return Config.instance;
+    }
 
-	        return Config.instance;
-	    }
-
-	public Properties getBaseConfig() {
-		return this.config;
+	public static Properties getBaseConfig() {
+		return getInstance().config;
+	}
+	public static String getBaseConfig(String property) {
+		getInstance();
+		return Config.getBaseConfig().getProperty(property);
 	}
 
 }

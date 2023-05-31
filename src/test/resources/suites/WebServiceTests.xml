@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="WebServiceTests" parallel="tests" thread-count="1">	
+	<test name="pruebaWebService_GET_departments">
+		<parameter name="baseUrl" value="https://www.mercadolibre.com.ar"></parameter>
+		<parameter name="endpoint" value="/menu/departments"></parameter>
+		<parameter name="nodoBuscado" value="departments"></parameter>
+		<classes>
+			<class name="scripts.WebServiceTest">
+				<methods>
+					<include name="pruebaWebService_3_1" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

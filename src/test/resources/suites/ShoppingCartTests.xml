@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ShoppingCartTests" parallel="tests" thread-count="1">	
+	<test name="loginCorrectoTest_001">
+		<classes>
+			<class name="scripts.LoginTest">
+				<methods>
+					<include name="loginCorrectoTest_001" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

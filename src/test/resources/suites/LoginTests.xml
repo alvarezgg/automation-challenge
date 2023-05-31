@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="LoginTests" parallel="tests" thread-count="1">	
+	<test name="LoginCorrecto">
+		<classes>
+			<class name="scripts.LoginTest">
+				<methods>
+					<include name="loginCorrectoTest_1_2" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="LoginIncorrecto">
+		<parameter name="wrongUsername" value="abc1234"></parameter>
+		<parameter name="wrongPassword" value="0123456"></parameter>
+		<classes>
+			<class name="scripts.LoginTest">
+				<methods>
+					<include name="loginIncorrectoTest_1_2" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test name="LoginIncorrectoConDatosCorrectos">
+		<parameter name="wrongUsername" value="standard_user"></parameter>
+		<parameter name="wrongPassword" value="secret_sauce"></parameter>
+		<classes>
+			<class name="scripts.LoginTest">
+				<methods>
+					<include name="loginIncorrectoTest_1_2" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>

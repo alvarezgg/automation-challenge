@@ -44,7 +44,7 @@ public class LoginTest extends BaseTest{
 		assertEquals(actualURL, loginPage.getPageURL(),"La URL de llegada no es la esperada luego del login");
 				
 		assertTrue(loginPage.hasLoginError(), "No se muestra el mensaje de login incorrecto en la UI");
-		Logger.errorLog(loginPage.getLoginMessage());
+		Logger.log(loginPage.getLoginMessage());
 	}
 
 	private LoginPage reachLoginPage() {

@@ -3,9 +3,9 @@
 <suite name="ShoppingCartTests" parallel="tests" thread-count="1">	
 	<test name="loginCorrectoTest_001">
 		<classes>
-			<class name="scripts.LoginTest">
+			<class name="scripts.ShoppingCartTest">
 				<methods>
-					<include name="loginCorrectoTest_001" />
+					<include name="agregarProductoTestDesdeInventario_2_3" />
 				</methods>
 			</class>
 		</classes>

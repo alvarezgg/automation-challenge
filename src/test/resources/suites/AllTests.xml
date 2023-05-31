@@ -3,7 +3,7 @@
 <suite name="AllTests">
 	<suite-files>
 		<suite-file path="LoginTests.xml"></suite-file>
-<!--		<suite-file path="ShoppingCartTests.xml"></suite-file>	-->
-<!--		<suite-file path="WebServiceTests.xml"></suite-file>	-->
+		<suite-file path="ShoppingCartTests.xml"></suite-file>	
+		<suite-file path="WebServiceTests.xml"></suite-file>	
 	</suite-files>
  </suite>

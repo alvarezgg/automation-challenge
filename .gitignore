@@ -88,4 +88,7 @@ buildNumber.properties
 
 # End of https://www.toptal.com/developers/gitignore/api/eclipse,maven
 
+# artefactos de Ejecuciones
 test-output/
+fail_evidences/
+
